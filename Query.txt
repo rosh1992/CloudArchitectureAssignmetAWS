@@ -1,0 +1,9 @@
+CREATE EXTERNAL Table posts (Id int, PostTypeId tinyint,
+ AcceptedAnswerId int, ParentId int, CreationDate TIMESTAMP, 
+DeletionDate TIMESTAMP, Score int, ViewCount int, Body varchar(10000), 
+OwnerUserId int, OwnerDisplayName varchar(40), LastEditorUserId int, 
+LastEditorDisplayName varchar(40), LastEditDate TIMESTAMP,LastActivityDate TIMESTAMP, 
+Title varchar(250), Tags varchar(250), AnswerCount int, CommentCount int, 
+FavoriteCount int, ClosedDate TIMESTAMP, CommuntyOwnedDate TIMESTAMP)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+LOCATION 's3://roshannambiar-cloudproject/QueryResults.csv';
